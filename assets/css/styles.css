@@ -5,8 +5,15 @@
 }
 
 body {
-    margin: 50px;
     text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 20px;
 }
 
 header {
@@ -14,6 +21,7 @@ header {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    height: 15vh;
 }
 
 h1{
@@ -36,4 +44,57 @@ hr {
     height: 1px;
     background: #CFCFCF;
 }
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 70vh;
+}
+
+.number {
+    font-size: 300px;
+}
+
+.button-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+}
+
+.enter-number {
+    width: 217px;
+    height: 42px;
+    background: #FFFFFF;
+    border: 1px solid #FF6600;
+    border-radius: 4px;
+    margin-right: 11px;
+}
+
+.send-number {
+    width: 70px;
+    cursor: pointer;
+    height: 42px;
+    background: linear-gradient(174.92deg, #EF6C00 18.47%, #DB6300 36.57%);
+    border: none;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    color: white;
+    border-radius: 4px;
+    transition: 0.3s ease-in-out;
+}
+
+.send-number:hover {
+    transition: transform 0.3s;
+    transform: scale(0.9);
+}
+
+
+
+
 
