@@ -1,1 +1,39 @@
-styles.css
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 50px;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    font-family: 'Montserrat';
+    width: 248px;
+    height: 35px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: -1px;
+    background: linear-gradient(174.92deg, #EF6C00 18.47%, #DB6300 36.57%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+hr {
+    width: 205px;
+    height: 1px;
+    background: #CFCFCF;
+}
+
