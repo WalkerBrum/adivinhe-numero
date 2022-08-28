@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/styles.css"></link>
     <title>Adivinhe o Número</title>
+    <script src="assets/js/scripts.js" defer></script>
 <body>
     <div class="container">
         <header>
@@ -13,13 +14,12 @@
             <hr />
         </header>
         <main>
-            <span class="number">0</span>
+            <span id="number">0</span>
         </main>
         <div class="button-input">
-            <input type="text" class="enter-number"/>
-            <button class="send-number">ENVIAR</button>
+            <input type="text" id="enter-number" placeholder="Digite o palpite">
+            <input type="submit" id="send-number" value="ENVIAR">
         </div>
-        <script src="assets/js/scripts.js"></script>
     </div>
 </body>
 </html>

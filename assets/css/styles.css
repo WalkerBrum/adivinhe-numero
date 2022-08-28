@@ -53,7 +53,7 @@ main {
     height: 70vh;
 }
 
-.number {
+#number {
     font-size: 300px;
 }
 
@@ -64,16 +64,25 @@ main {
     height: 15vh;
 }
 
-.enter-number {
+#enter-number {
     width: 217px;
     height: 42px;
     background: #FFFFFF;
-    border: 1px solid #FF6600;
+    border: 1px solid #CFCFCF;
     border-radius: 4px;
     margin-right: 11px;
+    padding: 10px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
 }
 
-.send-number {
+#enter-number:focus {
+    outline: 1px solid #FF6600;
+    border: none;
+}
+
+#send-number {
     width: 70px;
     cursor: pointer;
     height: 42px;
@@ -86,12 +95,14 @@ main {
     line-height: 14px;
     color: white;
     border-radius: 4px;
-    transition: 0.3s ease-in-out;
+    transition: 0.5s ease-in-out;
 }
 
-.send-number:hover {
-    transition: transform 0.3s;
-    transform: scale(0.9);
+#send-number:hover {
+    transition: 0.5s ease-in-out;
+    background-color: #EF6C00;
+    box-shadow:  #EF6C00 0px 0px 20px 0px;
+    letter-spacing: 1px;
 }
 
 
