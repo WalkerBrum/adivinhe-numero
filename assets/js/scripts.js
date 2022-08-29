@@ -39,17 +39,18 @@ const changeNumber = (value) => {
 }
 
 const showMessage = (value) => {
+    
     console.log('número sorteado = ' + numberToBeGues);
     console.log('número digitado = ' + value);
     if (0 > value >= 300) {
-        message.innerHTML = 'Erro! Número deve estar entre 1 e 300.';
+        message.innerHTML = 'ERRO! Número deve estar entre 1 e 300.';
+    } else if (value == numberToBeGues) {
+        message.innerHTML = 'Parabéns! Você acertou!';
     } else if (value > numberToBeGues) {
         message.innerHTML = 'É maior!';
     } else if (value < numberToBeGues) {
         message.innerHTML = 'É menor!'
-    } else {
-        message.innerHTML = 'Erro! Deve ser inserido um número válido entre 1 e 300'
-    }
+    } 
 }
 
 
