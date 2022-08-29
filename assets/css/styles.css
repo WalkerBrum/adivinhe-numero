@@ -105,6 +105,13 @@ main {
     letter-spacing: 1px;
 }
 
+#message {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: -1px;
+}
+
 
 
 
