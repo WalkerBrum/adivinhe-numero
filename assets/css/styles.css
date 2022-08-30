@@ -12,6 +12,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     height: 100vh;
     padding: 20px;
 }
@@ -57,11 +58,25 @@ main {
     font-size: 200px;
 }
 
+.part-down {
+    height: 15vh;
+    width: 297px;
+}
+
 .button-input {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 15vh;
+}
+
+#message-string {
+    margin: 5px;
+    color: rgb(204, 51, 0);
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: -1px;
+    text-align: left;
 }
 
 #enter-number {
