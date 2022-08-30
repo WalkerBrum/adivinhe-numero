@@ -46,18 +46,26 @@ hr {
     background: #CFCFCF;
 }
 
-main {
+#main {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    gap: 20px;
     height: 70vh;
 }
 
-.digit {
+#numbers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+#digit {
     display: flex;
     flex-direction: column;
-  }
+}
   
 .part-up {
     border: ridge 10px transparent;
@@ -74,107 +82,107 @@ main {
     height: 100px;
 }
 
-#zero .part-up {
+.zero .part-up {
     border-top-color: #000;
     border-right-color: #000;
     border-left-color: #000;
 }
 
-#zero .part-down {
+.zero .part-down {
     border-bottom-color: #000;
     border-right-color: #000;
     border-left-color: #000;
 }
 
-#one .part-up {
+.one .part-up {
     border-right-color: #000;
 }
 
-#one .part-down {
+.one .part-down {
     border-right-color: #000;
 }
 
-#two .part-up {
+.two .part-up {
     border-top-color: #000;
     border-right-color: #000;
     border-bottom-color: #000;
 }
 
-#two .part-down {
+.two .part-down {
     border-left-color: #000;
     border-bottom-color: #000;
     border-top-color: #000;
 
 }
 
-#three .part-up {
+.three .part-up {
     border-top-color: #000;
     border-right-color: #000;
     border-bottom-color: #000;
 }
 
-#three .part-down {
+.three .part-down {
     border-right-color: #000;
     border-bottom-color: #000;
     border-top-color: #000;
 }
 
-#four .part-up {
+.four .part-up {
     border-left-color: #000;
     border-right-color: #000;
     border-bottom-color: #000;
 }
 
-#four .part-down {
+.four .part-down {
     border-right-color: #000;
     border-top-color: #000;   
 }
 
-#five .part-up {
+.five .part-up {
     border-top-color: #000;
     border-left-color: #000;
     border-bottom-color: #000;
 }
 
-#five .part-down {
+.five .part-down {
     border-right-color: #000;
     border-top-color: #000;
     border-bottom-color: #000;
 }
 
-#six .part-up {
+.six .part-up {
     border-top-color: #000;
     border-left-color: #000;
     border-bottom-color: #000;
 }
 
-#six .part-down {
+.six .part-down {
     border-color: #000;
 }
 
-#seven .part-up {
+.seven .part-up {
     border-top-color: #000;
     border-left-color: #000;
     border-right-color: #000;
 }
 
-#seven .part-down {
+.seven .part-down {
     border-right-color: #000;
 }
 
-#eight .part-up {
+.eight .part-up {
     border-color: #000;
 }
 
-#eight .part-down {
+.eight .part-down {
     border-color: #000;
 }
 
-#nine .part-up {
+.nine .part-up {
     border-color: #000;
 }
 
-#nine .part-down {
+.nine .part-down {
     border-right-color: #000;
 }
 

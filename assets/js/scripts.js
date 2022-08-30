@@ -1,6 +1,7 @@
 const btnSendNumber = document.querySelector('#send-number');
 const inputToGuess = document.querySelector('#enter-number');
-const number = document.querySelector('.digito');
+const number = document.querySelector('#digit');
+const numbers = document.querySelector('#numbers')
 const message = document.querySelector('#message');
 const buttonRestart = document.querySelector('#button-restart');
 const messageString = document.querySelector('#message-string')
@@ -15,12 +16,13 @@ async function getNumber() {
     numberToBeGues = json.value;
 
     return numberToBeGues;
+
 }
 
 window.onload = async () => {
 
-    response = await getNumber();
-    
+    response = await getNumber();  
+
 }
 
 const changeNumber = (value) => {
@@ -30,17 +32,45 @@ const changeNumber = (value) => {
         return;
     }
 
+    className = value.split("");
+
+    const numerClassMap = {
+        0: 'zero',
+        1: 'one',
+        2: 'two',
+        3: 'three',
+        4: 'four',
+        5: 'five',
+        6: 'six',
+        7: 'seven',
+        8: 'eight',
+        9: 'nine',
+    }
+
+    number.setAttribute('class', numerClassMap[className[0]]);
+    console.log(className.length)
+    if (className.length > 1) {
+
+        for (let i = 1; i < className.length; i++) {
+
+            document.querySelector('#numbers').appendChild("div")
+            const div = document.querySelector('div');
+            div.setAttribute('class', numerClassMap[className[i]]);
+        }
+    }
+    
     messageString.innerHTML = '';
 
-    number.innerHTML = value;
 }
 
 const disabledAttributes = (attibute) => attibute.setAttribute('disabled', 'disabled');
 
 const changeAttributeBtnSendNumber = () => {
+
     btnSendNumber.classList.remove('send-number');
     btnSendNumber.style.background = '#DDDDDD';
     btnSendNumber.style.cursor = 'auto';
+
 }
 
 const addButtonRestart = () => {
@@ -55,6 +85,7 @@ const addButtonRestart = () => {
     disabledAttributes(btnSendNumber);
 
     changeAttributeBtnSendNumber();
+
 }
 
 const showMessage = (value) => {
@@ -79,6 +110,7 @@ const showMessage = (value) => {
         message.innerHTML = 'É menor!';
         message.style.color = '#FF6600';
     } 
+
 }
 
 const clearGuess = () => inputToGuess.value = '';
@@ -94,6 +126,7 @@ btnSendNumber.addEventListener("click", function(e) {
     showMessage(value);
 
     clearGuess();
+
 });
 
 buttonRestart.addEventListener("click", function(e) {
@@ -101,7 +134,13 @@ buttonRestart.addEventListener("click", function(e) {
     e.preventDefault();
 
     location.reload();
+
 });
+
+// Função para mostrar número
+const showNumber = (value) => {
+ 
+}
 
 
 
