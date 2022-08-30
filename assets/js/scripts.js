@@ -30,6 +30,7 @@ const changeNumber = (value) => {
 
 const addButtonRestart = () => {
     buttonRestart.innerHTML = '<button>NOVA PARTIDA</button>'
+    console.log(buttonRestart)
 }
 
 const showMessage = (value) => {
@@ -65,6 +66,13 @@ btnSendNumber.addEventListener("click", function(e) {
     const value = number.value;
     changeNumber(value);
     showMessage(value);
+});
+
+buttonRestart.addEventListener("click", function(e) {
+
+    e.preventDefault();
+
+    location.reload();
 });
 
 
