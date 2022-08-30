@@ -1,4 +1,5 @@
 const btnSendNumber = document.querySelector('#send-number');
+const inputToGuess = document.querySelector('#enter-number');
 const number = document.querySelector('#number');
 const message = document.querySelector('#message');
 const buttonRestart = document.querySelector('#button-restart');
@@ -57,15 +58,19 @@ const showMessage = (value) => {
     } 
 }
 
+const clearGuess = () => inputToGuess.value = '';
+
 btnSendNumber.addEventListener("click", function(e) {
 
     e.preventDefault();
 
-    const number = document.querySelector('#enter-number');
+    const value = inputToGuess.value;
 
-    const value = number.value;
     changeNumber(value);
+
     showMessage(value);
+
+    clearGuess();
 });
 
 buttonRestart.addEventListener("click", function(e) {
