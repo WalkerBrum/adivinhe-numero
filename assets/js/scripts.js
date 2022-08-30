@@ -49,22 +49,22 @@ const addButtonRestart = () => {
 
 const showMessage = (value) => {
     
-    console.log('número sorteado = ' + numberToBeGues);
-    console.log('número digitado = ' + value);
     if (value < 1 || value > 300) {
-        console.log('entrou');
         message.innerHTML = 'ERRO! Número deve estar entre 1 e 300.';
         message.style.color = '#CC3300';
         number.style.color = '#CC3300';
         addButtonRestart();
+
     } else if (value == numberToBeGues) {
         message.innerHTML = 'Parabéns! Você acertou!';
         message.style.color = '#32BF00';
         number.style.color = '#32BF00';
         addButtonRestart();
+
     } else if (value > numberToBeGues) {
         message.innerHTML = 'É maior!';
         message.style.color = '#FF6600';
+        
     } else if (value < numberToBeGues) {
         message.innerHTML = 'É menor!';
         message.style.color = '#FF6600';
