@@ -39,7 +39,11 @@ const changeAttributeBtnSendNumber = () => {
 
 const addButtonRestart = () => {
 
-    buttonRestart.innerHTML = '<button>NOVA PARTIDA</button>';
+    buttonRestart.innerHTML = '<button>';
+    
+    const selectButton = document.querySelector('button')
+   
+    selectButton.innerHTML = '<i class="far fa-redo"></i><span>NOVA PARTIDA</span>';
 
     disabledAttributes(inputToGuess);
     disabledAttributes(btnSendNumber);
