@@ -29,9 +29,22 @@ const changeNumber = (value) => {
     number.innerHTML = value;
 }
 
+const disabledAttributes = (attibute) => attibute.setAttribute('disabled', 'disabled');
+
+const changeAttributeBtnSendNumber = () => {
+    btnSendNumber.classList.remove('send-number');
+    btnSendNumber.style.background = '#DDDDDD';
+    btnSendNumber.style.cursor = 'auto';
+}
+
 const addButtonRestart = () => {
-    buttonRestart.innerHTML = '<button>NOVA PARTIDA</button>'
-    console.log(buttonRestart)
+
+    buttonRestart.innerHTML = '<button>NOVA PARTIDA</button>';
+
+    disabledAttributes(inputToGuess);
+    disabledAttributes(btnSendNumber);
+
+    changeAttributeBtnSendNumber();
 }
 
 const showMessage = (value) => {
