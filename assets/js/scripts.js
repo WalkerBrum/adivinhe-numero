@@ -1,6 +1,6 @@
 const btnSendNumber = document.querySelector('#send-number');
 const inputToGuess = document.querySelector('#enter-number');
-const number = document.querySelector('#number');
+const number = document.querySelector('.digito');
 const message = document.querySelector('#message');
 const buttonRestart = document.querySelector('#button-restart');
 const messageString = document.querySelector('#message-string')

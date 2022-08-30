@@ -54,11 +54,131 @@ main {
     height: 70vh;
 }
 
-#number {
-    font-size: 200px;
+.digit {
+    display: flex;
+    flex-direction: column;
+  }
+  
+.part-up {
+    border: ridge 10px transparent;
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    margin-bottom: -10px;
 }
 
 .part-down {
+    border: ridge 10px transparent;
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+#zero .part-up {
+    border-top-color: #000;
+    border-right-color: #000;
+    border-left-color: #000;
+}
+
+#zero .part-down {
+    border-bottom-color: #000;
+    border-right-color: #000;
+    border-left-color: #000;
+}
+
+#one .part-up {
+    border-right-color: #000;
+}
+
+#one .part-down {
+    border-right-color: #000;
+}
+
+#two .part-up {
+    border-top-color: #000;
+    border-right-color: #000;
+    border-bottom-color: #000;
+}
+
+#two .part-down {
+    border-left-color: #000;
+    border-bottom-color: #000;
+    border-top-color: #000;
+
+}
+
+#three .part-up {
+    border-top-color: #000;
+    border-right-color: #000;
+    border-bottom-color: #000;
+}
+
+#three .part-down {
+    border-right-color: #000;
+    border-bottom-color: #000;
+    border-top-color: #000;
+}
+
+#four .part-up {
+    border-left-color: #000;
+    border-right-color: #000;
+    border-bottom-color: #000;
+}
+
+#four .part-down {
+    border-right-color: #000;
+    border-top-color: #000;   
+}
+
+#five .part-up {
+    border-top-color: #000;
+    border-left-color: #000;
+    border-bottom-color: #000;
+}
+
+#five .part-down {
+    border-right-color: #000;
+    border-top-color: #000;
+    border-bottom-color: #000;
+}
+
+#six .part-up {
+    border-top-color: #000;
+    border-left-color: #000;
+    border-bottom-color: #000;
+}
+
+#six .part-down {
+    border-color: #000;
+}
+
+#seven .part-up {
+    border-top-color: #000;
+    border-left-color: #000;
+    border-right-color: #000;
+}
+
+#seven .part-down {
+    border-right-color: #000;
+}
+
+#eight .part-up {
+    border-color: #000;
+}
+
+#eight .part-down {
+    border-color: #000;
+}
+
+#nine .part-up {
+    border-color: #000;
+}
+
+#nine .part-down {
+    border-right-color: #000;
+}
+
+.last-block {
     height: 15vh;
     width: 297px;
 }
