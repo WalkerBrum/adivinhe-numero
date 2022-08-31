@@ -51,7 +51,7 @@ hr {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
     height: 70vh;
 }
 
@@ -66,123 +66,130 @@ hr {
     display: flex;
     flex-direction: column;
 }
+
+#digits {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    display: flex;
+    flex-direction: row;
+}
   
 .part-up {
     border: ridge 10px transparent;
-    border-radius: 10px;
-    width: 100px;
+    width: 70px;
     height: 100px;
     margin-bottom: -10px;
 }
 
 .part-down {
     border: ridge 10px transparent;
-    border-radius: 10px;
-    width: 100px;
+    width: 70px;
     height: 100px;
 }
 
-.zero .part-up {
+.d0 .part-up {
     border-top-color: #000;
     border-right-color: #000;
     border-left-color: #000;
 }
 
-.zero .part-down {
+.d0 .part-down {
     border-bottom-color: #000;
     border-right-color: #000;
     border-left-color: #000;
 }
 
-.one .part-up {
+.d1 .part-up {
     border-right-color: #000;
 }
 
-.one .part-down {
+.d1 .part-down {
     border-right-color: #000;
 }
 
-.two .part-up {
+.d2 .part-up {
     border-top-color: #000;
     border-right-color: #000;
     border-bottom-color: #000;
 }
 
-.two .part-down {
+.d2 .part-down {
     border-left-color: #000;
     border-bottom-color: #000;
     border-top-color: #000;
 
 }
 
-.three .part-up {
+.d3 .part-up {
     border-top-color: #000;
     border-right-color: #000;
     border-bottom-color: #000;
 }
 
-.three .part-down {
+.d3 .part-down {
     border-right-color: #000;
     border-bottom-color: #000;
     border-top-color: #000;
 }
 
-.four .part-up {
+.d4 .part-up {
     border-left-color: #000;
     border-right-color: #000;
     border-bottom-color: #000;
 }
 
-.four .part-down {
+.d4 .part-down {
     border-right-color: #000;
     border-top-color: #000;   
 }
 
-.five .part-up {
+.d5 .part-up {
     border-top-color: #000;
     border-left-color: #000;
     border-bottom-color: #000;
 }
 
-.five .part-down {
+.d5 .part-down {
     border-right-color: #000;
     border-top-color: #000;
     border-bottom-color: #000;
 }
 
-.six .part-up {
+.d6 .part-up {
     border-top-color: #000;
     border-left-color: #000;
     border-bottom-color: #000;
 }
 
-.six .part-down {
+.d6 .part-down {
     border-color: #000;
 }
 
-.seven .part-up {
+.d7 .part-up {
     border-top-color: #000;
     border-left-color: #000;
     border-right-color: #000;
 }
 
-.seven .part-down {
+.d7 .part-down {
     border-right-color: #000;
 }
 
-.eight .part-up {
+.d8 .part-up {
     border-color: #000;
 }
 
-.eight .part-down {
+.d8 .part-down {
     border-color: #000;
 }
 
-.nine .part-up {
+.d9 .part-up {
     border-color: #000;
 }
 
-.nine .part-down {
+.d9 .part-down {
     border-right-color: #000;
 }
 

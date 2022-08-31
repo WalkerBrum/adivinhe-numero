@@ -1,15 +1,15 @@
 const btnSendNumber = document.querySelector('#send-number');
 const inputToGuess = document.querySelector('#enter-number');
-const number = document.querySelector('#digit');
-const numbers = document.querySelector('#numbers')
-const message = document.querySelector('#message');
+const digits = document.querySelector("#digits");
 const buttonRestart = document.querySelector('#button-restart');
-const messageString = document.querySelector('#message-string')
+const message = document.querySelector('#message');
+
+// Para receber valor a ser encontrado
 let numberToBeGues;
 
-
+// Para fazer requisição de um número aleatório na API
 async function getNumber() {
-
+    
     const response = await fetch('https://us-central1-ss-devops.cloudfunctions.net/rand?min=1&max=300');
     const json = await response.json();
 
@@ -19,52 +19,51 @@ async function getNumber() {
 
 }
 
-window.onload = async () => {
+// Criar digito 
+const createDigit = (number) => {
+    const digitContainer = document.createElement('div');
+    digitContainer.className = 'd' + number;
 
-    response = await getNumber();  
+    digitContainer.innerHTML = `
+        <div class="part-up"></div>
+        <div class="part-down"></div>
+    `;
 
+    return digitContainer;
 }
 
+// Mostrar números
+const showNumber = (value) => {
+
+    const numberDigits = value; 
+
+    numberDigits.split("").forEach((number) => {
+        digits.appendChild(createDigit(number))
+    });
+}
+
+// Tratar error a digitir valores não númerericos no input e trocar números quando digitados no input
 const changeNumber = (value) => {
+
+    const messageString = document.querySelector('#message-string');
 
     if (isNaN(value)) {
         messageString.innerHTML = 'ERRO! Digite um número válido!'
         return;
-    }
-
-    className = value.split("");
-
-    const numerClassMap = {
-        0: 'zero',
-        1: 'one',
-        2: 'two',
-        3: 'three',
-        4: 'four',
-        5: 'five',
-        6: 'six',
-        7: 'seven',
-        8: 'eight',
-        9: 'nine',
-    }
-
-    number.setAttribute('class', numerClassMap[className[0]]);
-    console.log(className.length)
-    if (className.length > 1) {
-
-        for (let i = 1; i < className.length; i++) {
-
-            document.querySelector('#numbers').appendChild("div")
-            const div = document.querySelector('div');
-            div.setAttribute('class', numerClassMap[className[i]]);
-        }
+    } else {
+        messageString.innerHTML = '';
     }
     
-    messageString.innerHTML = '';
+    digits.innerHTML = '';
+
+    showNumber(value);
 
 }
 
+// Desabilitar atributos
 const disabledAttributes = (attibute) => attibute.setAttribute('disabled', 'disabled');
 
+// Trocar atributos do botão
 const changeAttributeBtnSendNumber = () => {
 
     btnSendNumber.classList.remove('send-number');
@@ -73,6 +72,7 @@ const changeAttributeBtnSendNumber = () => {
 
 }
 
+// Adicionar botão restart
 const addButtonRestart = () => {
 
     buttonRestart.innerHTML = '<button>';
@@ -88,18 +88,17 @@ const addButtonRestart = () => {
 
 }
 
+// Mostrar mensagem de acordo com valor inserido no input
 const showMessage = (value) => {
     
     if (value < 1 || value > 300) {
         message.innerHTML = 'ERRO! O número digitado deve estar entre 1 e 300!';
         message.style.color = '#CC3300';
-        number.style.color = '#CC3300';
         addButtonRestart();
 
     } else if (value == numberToBeGues) {
-        message.innerHTML = 'Você acertou!!!!';
+        message.innerHTML = 'Parabéns! Você acertou!!!';
         message.style.color = '#32BF00';
-        number.style.color = '#32BF00';
         addButtonRestart();
 
     } else if (value > numberToBeGues) {
@@ -113,8 +112,16 @@ const showMessage = (value) => {
 
 }
 
+// Limpar valor do input
 const clearGuess = () => inputToGuess.value = '';
 
+window.onload = async () => {
+
+    response = await getNumber();
+
+}
+
+// Acionar funções ao clicar no botão enviar
 btnSendNumber.addEventListener("click", function(e) {
 
     e.preventDefault();
@@ -129,6 +136,7 @@ btnSendNumber.addEventListener("click", function(e) {
 
 });
 
+// Acionar funções ao clicar no botão Nova partida
 buttonRestart.addEventListener("click", function(e) {
 
     e.preventDefault();
@@ -137,10 +145,8 @@ buttonRestart.addEventListener("click", function(e) {
 
 });
 
-// Função para mostrar número
-const showNumber = (value) => {
- 
-}
+
+
 
 
 
